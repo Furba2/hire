@@ -1,0 +1,15 @@
+{% extends 'Hire/base.html' %}
+{% block content %}
+
+<p>Services</p>
+
+<ul>
+    {% for service in services %}
+      <li>
+        <a href="{% url 'Hire:service' service.id %}">
+            {{ service }}</a>
+      </li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}

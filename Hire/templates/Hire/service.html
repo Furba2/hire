@@ -1,0 +1,16 @@
+{% extends 'Hire/base.html' %}
+{% block content %}
+
+<p>Service: {{ service }}</p>
+
+<p>Services</p>
+
+<ul>
+    {% for problem in problems %}
+    <li>
+        <p>{{ problem.text|linebreaks }}</p>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
