@@ -6,13 +6,12 @@
 {% endif %}
 
 <form method="post" action="{% url 'users:login' %}">
-{% csrf_token %}
- {{ form.as_p }}
+    {% csrf_token %}
+     {{ form.as_p }}
 
-
-<button name="submit">Log in</button>
-<input type="hidden" name="next"
-value="{% url 'Hire:index' %}" />
+    <button name="submit">Login</button>
+    <input type="hidden" name="next"
+    value="{% url 'Hire:index' %}" />
 </form>
 
 {% endblock content %}

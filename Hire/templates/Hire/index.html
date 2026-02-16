@@ -1,17 +1,20 @@
 {% extends 'Hire/base.html' %}
 {% block content %}
 
-<div class="container my-5">
+<div class="jumbotron">
+    <h1 class="display-3">
+        Hire skilled people to solve your problems
+    </h1>
 
-    <div class="text-center py-5 bg-light rounded shadow-sm">
+    <p class="lead">
+        hire.com provides access to a talent pool,
+        reducing hiring time and overhead costs while ensuring skilled
+        workers are matched to specific business needs. This strategic
+        solution enhances operational efficiency.
+    </p>
 
-        <h1 class="display-4 mb-3">
-            Hire skilled people to solve your problems
-        </h1>
-
-        <a href="{% url 'Hire:services' %}" class="btn btn-primary btn-lg">Get Started</a>
-
-    </div>
+    <a href="{% url 'Hire:services' %}" 
+    class="btn btn-lg btn-primary" role="button">Get Started &raquo;</a>
 
 </div>
 
