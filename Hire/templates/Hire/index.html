@@ -1,22 +1,21 @@
 {% extends 'Hire/base.html' %}
 {% block content %}
 
-<div class="jumbotron">
-    <h1 class="display-3">
-        Hire skilled people to solve your problems
+<div class="jumbotron text-center py-5">
+    <h1 class="display-4 fw-bold mb-4">
+        Hire Skilled Professionals Get Real Results.
     </h1>
 
-    <p class="lead">
-        hire.com provides access to a talent pool,
-        reducing hiring time and overhead costs while ensuring skilled
-        workers are matched to specific business needs. This strategic
-        solution enhances operational efficiency.
+    <p class="lead mb-4">
+        hire.com connects you with verified, highly skilled talent ready to
+        solve your business challenges. Reduce hiring time, cut overhead
+        costs, and find the right experts faster — without the stress.
     </p>
 
     <a href="{% url 'Hire:services' %}" 
-    class="btn btn-lg btn-primary" role="button">Get Started &raquo;</a>
-
+       class="btn btn-lg btn-primary px-4">
+       Get Started &raquo;
+    </a>
 </div>
-
 
 {% endblock content %}

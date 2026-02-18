@@ -1,16 +1,29 @@
 {% extends 'Hire/base.html' %}
 {% block content %}
 
-<p>Service: {{ service }}</p>
+<div class="container mt-5">
 
-<p>Services</p>
+    <h2 class="text-center mb-2">Service: {{ service }}</h2>
+    <p class="text-center text-muted mb-4">Available Problems</p>
 
-<ul>
-    {% for problem in problems %}
-    <li>
-        <p>{{ problem.text|linebreaks }}</p>
-    </li>
-    {% endfor %}
-</ul>
+    <div class="row">
+        {% for problem in problems %}
+        <div class="col-6 col-md-3 mb-4">
+            <div class="ratio ratio-1x1">
+                <div class="bg-light border rounded d-flex 
+                            align-items-center justify-content-center 
+                            text-center p-3 shadow-sm">
+
+                    <div>
+                        {{ problem.text|linebreaks }}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
 
 {% endblock content %}

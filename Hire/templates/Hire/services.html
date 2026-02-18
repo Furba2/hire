@@ -1,15 +1,27 @@
 {% extends 'Hire/base.html' %}
 {% block content %}
 
-<p>Services</p>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Our Services</h2>
 
-<ul>
-    {% for service in services %}
-      <li>
-        <a href="{% url 'Hire:service' service.id %}">
-            {{ service }}</a>
-      </li>
-    {% endfor %}
-</ul>
+    <div class="row">
+        {% for service in services %}
+        <div class="col-6 col-md-3 mb-4">
+            <div class="ratio ratio-1x1">
+                <div class="bg-light border rounded d-flex 
+                            align-items-center justify-content-center shadow-sm">
+
+                    <a href="{% url 'Hire:service' service.id %}" 
+                       class="text-decoration-none text-dark fw-semibold">
+                        {{ service }}
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
 
 {% endblock content %}
